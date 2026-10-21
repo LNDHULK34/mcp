@@ -1,0 +1,42 @@
+{
+  "name": "skillvault-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Universal MCP Skill Hub & Web Studio — upload Markdown folders, sync GitHub repos, and share skills seamlessly across all AI agents.",
+  "main": "server/index.js",
+  "bin": {
+    "skillvault-mcp": "./server/stdio.js"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node --use-system-ca server/index.js",
+    "build": "vite build",
+    "start": "NODE_ENV=production node --use-system-ca server/index.js",
+    "mcp:stdio": "node --use-system-ca server/stdio.js",
+    "test": "node --use-system-ca --test tests/mcp.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LNDHULK34/mcp.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.511.0",
+    "marked": "^15.0.0",
+    "multer": "^2.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tar": "^7.4.3",
+    "yaml": "^2.8.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "@vitejs/plugin-react": "^4.5.0",
+    "tailwindcss": "^4.1.0",
+    "vite": "^6.3.0"
+  }
+}
